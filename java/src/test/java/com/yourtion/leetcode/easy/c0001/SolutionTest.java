@@ -1,4 +1,4 @@
-package com.yourtion.leetcode.easy.c001;
+package com.yourtion.leetcode.easy.c0001;
 
 import org.junit.jupiter.api.Test;
 
