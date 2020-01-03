@@ -17,6 +17,15 @@ public class TestUtils {
         return output;
     }
 
+    public static String[] stringToStringArray(String input) {
+        String[] in = input.split(",");
+        String[] arr = new String[in.length];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = in[i].trim();
+        }
+        return arr;
+    }
+
     public static String integerArrayToString(int[] nums, int length) {
         if (length == 0) {
             return "[]";
