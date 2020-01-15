@@ -4,6 +4,7 @@ import com.yourtion.leetcode.utils.ListNode;
 import com.yourtion.leetcode.utils.TreeNode;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 public class TestUtils {
@@ -122,5 +123,33 @@ public class TestUtils {
 
     public static String integerArrayToString(int[] nums) {
         return integerArrayToString(nums, nums.length);
+    }
+
+    public static String integerArrayListToString(List<Integer> nums, int length) {
+        if (length == 0) {
+            return "[]";
+        }
+
+        StringBuilder result = new StringBuilder();
+        for (int index = 0; index < length; index++) {
+            Integer number = nums.get(index);
+            result.append(number).append(", ");
+        }
+        return "[" + result.substring(0, result.length() - 2) + "]";
+    }
+
+    public static String integerArrayListToString(List<Integer> nums) {
+        return integerArrayListToString(nums, nums.size());
+    }
+
+    public static String int2dListToString(List<List<Integer>> nums) {
+        StringBuilder sb = new StringBuilder("[");
+        for (List<Integer> list : nums) {
+            sb.append(integerArrayListToString(list));
+            sb.append(",");
+        }
+
+        sb.setCharAt(sb.length() - 1, ']');
+        return sb.toString();
     }
 }
