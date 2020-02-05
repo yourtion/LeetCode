@@ -47,6 +47,27 @@ public class TestUtils {
         return dummyRoot.next;
     }
 
+    public static ListNode stringToListNodeWithCycle(String input, int pos) {
+        // Generate array from the input
+        int[] nodeValues = stringToIntegerArray(input);
+
+        // Now convert that list into linked list
+        ListNode dummyRoot = new ListNode(0);
+        ListNode ptr = dummyRoot;
+        ListNode c = null;
+        for (int i = 0; i < nodeValues.length; i++) {
+            ptr.next = new ListNode(nodeValues[i]);
+            if (i == pos) {
+                c = ptr.next;
+            }
+            ptr = ptr.next;
+            if (i == nodeValues.length - 1) {
+                ptr.next = c;
+            }
+        }
+        return dummyRoot.next;
+    }
+
     public static String listNodeToString(ListNode node) {
         if (node == null) {
             return "[]";
