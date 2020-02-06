@@ -68,6 +68,30 @@ public class TestUtils {
         return dummyRoot.next;
     }
 
+    public static ListNode combineList(ListNode tn1, ListNode tn2, int sk1, int sk2) {
+        int i = 0;
+        ListNode res = null;
+        ListNode n = tn1;
+        while (n != null) {
+            if (sk1 == i) {
+                res = n;
+            }
+            i += 1;
+            n = n.next;
+        }
+        i = 0;
+        n = tn2;
+        while (n != null) {
+            i += 1;
+            if (sk2 == i) {
+                n.next = res;
+                break;
+            }
+            n = n.next;
+        }
+        return res;
+    }
+
     public static String listNodeToString(ListNode node) {
         if (node == null) {
             return "[]";

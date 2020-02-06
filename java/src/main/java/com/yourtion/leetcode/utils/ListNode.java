@@ -26,4 +26,16 @@ public class ListNode {
         }
         return sb.toString();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        return this == o;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = val;
+        result = 31 * result + (next != null ? next.hashCode() : 0);
+        return result;
+    }
 }
