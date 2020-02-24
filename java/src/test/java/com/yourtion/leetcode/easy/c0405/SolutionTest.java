@@ -14,5 +14,7 @@ class SolutionTest {
     void toHex() {
         runTest(26, "1a");
         runTest(-1, "ffffffff");
+        runTest(0, "0");
+
     }
 }

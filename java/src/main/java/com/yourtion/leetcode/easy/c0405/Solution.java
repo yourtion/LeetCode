@@ -11,6 +11,9 @@ public class Solution {
     public static final String[] map = "0123456789abcdef".split("");
 
     public String toHex(int num) {
+        if (num == 0) {
+            return "0";
+        }
         StringBuilder sb = new StringBuilder();
         while (num != 0) {
             sb.insert(0, map[(num & 15)]);
