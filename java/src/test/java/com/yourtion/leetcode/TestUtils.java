@@ -225,6 +225,24 @@ public class TestUtils {
         return sb.toString();
     }
 
+    public static String int2dArrayToString(int[][] array) {
+        if (array == null) {
+            return "null";
+        }
+        if (array.length == 0) {
+            return "[]";
+        }
+
+        StringBuilder sb = new StringBuilder("[");
+        for (int[] item : array) {
+            sb.append(TestUtils.integerArrayToString(item));
+            sb.append(",");
+        }
+
+        sb.setCharAt(sb.length() - 1, ']');
+        return sb.toString();
+    }
+
     public static int[][] stringToInt2dArray(String input) {
         JsonArray jsonArray = Json.parse(input).asArray();
         if (jsonArray.size() == 0) {
