@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 class SolutionTest {
     void runTest(String source, String res) {
         System.out.printf("runTest: %s , res: %s \n", source, res);
-        String[] ret = res.split(",");
+        String[] ret = res.equals("") ? new String[0] : res.split(",");
         Assertions.assertArrayEquals(ret, new Solution().findWords(source.split(",")));
     }
 
