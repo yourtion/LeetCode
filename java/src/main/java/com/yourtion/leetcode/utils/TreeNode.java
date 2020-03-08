@@ -28,4 +28,16 @@ public class TreeNode {
         }
         return sb.toString();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        return this == o;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = val;
+        result = 31 * result + (left != null ? left.hashCode() : 0) + (right != null ? right.hashCode() : 0);
+        return result;
+    }
 }
