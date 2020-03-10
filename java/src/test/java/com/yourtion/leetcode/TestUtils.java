@@ -1,6 +1,7 @@
 package com.yourtion.leetcode;
 
 import com.yourtion.leetcode.utils.ListNode;
+import com.yourtion.leetcode.utils.Node;
 import com.yourtion.leetcode.utils.TreeNode;
 import com.yourtion.leetcode.utils.json.Json;
 import com.yourtion.leetcode.utils.json.JsonArray;
@@ -255,5 +256,17 @@ public class TestUtils {
             arr[i] = stringToIntegerArray(cols.toString());
         }
         return arr;
+    }
+
+    public static Node buildSampleNAryTree() {
+        List<Node> c = new LinkedList<>();
+        c.add(new Node(5));
+        c.add(new Node(6));
+        Node n1 = new Node(3, c);
+        List<Node> c2 = new LinkedList<>();
+        c2.add(n1);
+        c2.add(new Node(2));
+        c2.add(new Node(4));
+        return new Node(1, c2);
     }
 }
