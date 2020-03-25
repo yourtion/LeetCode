@@ -12,9 +12,9 @@ import java.util.Map;
  */
 public class Solution {
     public int findShortestSubArray(int[] nums) {
-        Map<Integer, Integer> left = new HashMap(16);
-        Map<Integer, Integer> right = new HashMap(16);
-        Map<Integer, Integer> count = new HashMap(16);
+        Map<Integer, Integer> left = new HashMap<>(16);
+        Map<Integer, Integer> right = new HashMap<>(16);
+        Map<Integer, Integer> count = new HashMap<>(16);
 
         for (int i = 0; i < nums.length; i++) {
             int x = nums[i];
