@@ -5,6 +5,7 @@ import com.yourtion.leetcode.utils.Node;
 import com.yourtion.leetcode.utils.TreeNode;
 import com.yourtion.leetcode.utils.json.Json;
 import com.yourtion.leetcode.utils.json.JsonArray;
+import com.yourtion.leetcode.utils.json.JsonValue;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -254,6 +255,24 @@ public class TestUtils {
         for (int i = 0; i < arr.length; i++) {
             JsonArray cols = jsonArray.get(i).asArray();
             arr[i] = stringToIntegerArray(cols.toString());
+        }
+        return arr;
+    }
+
+    public static char[][] stringToChar2dArray(String input) {
+        JsonArray jsonArray = Json.parse(input).asArray();
+        if (jsonArray.size() == 0) {
+            return new char[0][0];
+        }
+
+        char[][] arr = new char[jsonArray.size()][];
+        for (int i = 0; i < arr.length; i++) {
+            JsonArray cols = jsonArray.get(i).asArray();
+            int j = 0;
+            arr[i] = new char[cols.size()];
+            for (JsonValue v : cols) {
+                arr[i][j++] = v.asString().charAt(0);
+            }
         }
         return arr;
     }
