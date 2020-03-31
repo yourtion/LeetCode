@@ -217,6 +217,9 @@ public class TestUtils {
     }
 
     public static String int2dListToString(List<List<Integer>> nums) {
+        if (nums.size() == 0) {
+            return "[]";
+        }
         StringBuilder sb = new StringBuilder("[");
         for (List<Integer> list : nums) {
             sb.append(integerArrayListToString(list));
