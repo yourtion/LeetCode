@@ -1,5 +1,11 @@
 package com.yourtion.leetcode.daily.m04.d11;
 
+/**
+ * 887. 鸡蛋掉落
+ *
+ * @author Yourtion
+ * @link https://leetcode-cn.com/problems/super-egg-drop/
+ */
 public class Solution {
     public int superEggDrop(int K, int N) {
         if (N == 1) {
