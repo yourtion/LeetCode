@@ -1,8 +1,10 @@
 package com.yourtion.leetcode.daily.m03.d07;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+@DisplayName("每日一题 - 20200307")
 class MaxQueueTest {
 
     @Test

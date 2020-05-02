@@ -1,10 +1,12 @@
 package com.yourtion.leetcode.daily.m04.d13;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
+@DisplayName("每日一题 - 20200413")
 class TwitterTest {
 
     @Test
@@ -27,8 +29,8 @@ class TwitterTest {
         // 推文id6应当在推文id5之前，因为它是在5之后发送的.
         List<Integer> l2 = twitter.getNewsFeed(1);
         Assertions.assertEquals(2, l2.size());
-        Assertions.assertEquals(5, l2.get(0));
-        Assertions.assertEquals(6, l2.get(1));
+        Assertions.assertEquals(6, l2.get(0));
+        Assertions.assertEquals(5, l2.get(1));
 
 
         System.out.println("用户1取消关注了用户2.");

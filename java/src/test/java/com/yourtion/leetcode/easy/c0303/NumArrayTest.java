@@ -10,7 +10,7 @@ class NumArrayTest {
     NumArray arr = new NumArray(a);
 
     void runTest(int i, int j, int res) {
-        System.out.printf("runTest: %d %d, res: %s \n", i, j, res);
+        System.out.printf("runTest: %d %d, res: %s ", i, j, res);
         assertEquals(res, arr.sumRange(i, j));
     }
 

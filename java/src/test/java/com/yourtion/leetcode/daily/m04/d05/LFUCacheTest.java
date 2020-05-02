@@ -1,8 +1,10 @@
 package com.yourtion.leetcode.daily.m04.d05;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+@DisplayName("每日一题 - 20200405")
 class LFUCacheTest {
 
     @Test
