@@ -1,4 +1,4 @@
-package com.yourtion.leetcode.easy.c1441;
+package com.yourtion.leetcode.easy.c9003;
 
 import com.yourtion.leetcode.TestUtils;
 import org.junit.jupiter.api.Assertions;
@@ -11,22 +11,21 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("LCP 02. 分式化简")
+@DisplayName("LCP 06. 拿硬币")
 class SolutionTest {
 
     static Stream<Arguments> testDataProvider() {
         return Stream.of(
-                arguments("[3, 2, 0, 2]", "[13, 4]"),
-                arguments("[0, 0, 3]", "[3, 1]")
+                arguments("[4,2,1]", 4),
+                arguments("[2,3,10]", 8)
         );
     }
 
     @ParameterizedTest()
     @MethodSource("testDataProvider")
-    void fraction(String source, String res) {
-        System.out.printf("runTest: %s , res: %s", source, res);
+    void minCount(String source, int res) {
+        System.out.printf("runTest: %s , res: %d", source, res);
         int[] ss = TestUtils.stringToIntegerArray(source);
-        int[] ret = new Solution().fraction(ss);
-        Assertions.assertEquals(res, TestUtils.integerArrayToString(ret));
+        Assertions.assertEquals(res, new Solution().minCount(ss));
     }
 }

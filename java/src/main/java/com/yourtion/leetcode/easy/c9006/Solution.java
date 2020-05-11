@@ -1,7 +1,7 @@
-package com.yourtion.leetcode.easy.c1456;
+package com.yourtion.leetcode.easy.c9006;
 
 /**
- * 1456. 面试题 01.01. 判定字符是否唯一
+ * 9006. 面试题 01.01. 判定字符是否唯一
  *
  * @author Yourtion
  * @link https://leetcode-cn.com/problems/is-unique-lcci/

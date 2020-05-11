@@ -1,6 +1,5 @@
-package com.yourtion.leetcode.easy.c1440;
+package com.yourtion.leetcode.easy.c9007;
 
-import com.yourtion.leetcode.TestUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -11,22 +10,20 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("LCP 01. 猜数字")
+@DisplayName("面试题 01.02. 判定是否互为字符重排")
 class SolutionTest {
 
     static Stream<Arguments> testDataProvider() {
         return Stream.of(
-                arguments("[1,2,3]", "[1,2,3]", 3),
-                arguments("[2,2,3]", "[3,2,1]", 1)
+                arguments("abc", "bca", true),
+                arguments("abc", "bad", false)
         );
     }
 
     @ParameterizedTest()
     @MethodSource("testDataProvider")
-    void game(String s1, String s2, int res) {
-        System.out.printf("runTest: %s %s , res: %d", s1, s2, res);
-        int[] ss1 = TestUtils.stringToIntegerArray(s1);
-        int[] ss2 = TestUtils.stringToIntegerArray(s2);
-        Assertions.assertEquals(res, new Solution().game(ss1, ss2));
+    void checkPermutation(String s1, String s2, boolean res) {
+        System.out.printf("runTest: %s %s , res: %b", s1, s2, res);
+        Assertions.assertEquals(res, new Solution().CheckPermutation(s1, s2));
     }
 }

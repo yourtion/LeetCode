@@ -1,4 +1,4 @@
-package com.yourtion.leetcode.easy.c1451;
+package com.yourtion.leetcode.easy.c9004;
 
 import com.yourtion.leetcode.TestUtils;
 import org.junit.jupiter.api.Assertions;
@@ -11,22 +11,22 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("LCP 11. 期望个数统计")
+@DisplayName("LCP 07. 传递信息")
 class SolutionTest {
 
     static Stream<Arguments> testDataProvider() {
         return Stream.of(
-                arguments("[1,2,3]", 3),
-                arguments("[1,1,2]", 2),
-                arguments("[1,1]", 1)
+                arguments(5, "[[0,2],[2,1],[3,4],[2,3],[1,4],[2,0],[0,4]]", 3, 3),
+                arguments(3, "[[0,2],[2,1]]", 2, 0),
+                arguments(3, "[[0,1],[0,2],[2,1],[1,2],[1,0],[2,0]]", 5, 11)
         );
     }
 
     @ParameterizedTest()
     @MethodSource("testDataProvider")
-    void expectNumber(String source, int res) {
-        System.out.printf("runTest: %s , res: %d", source, res);
-        int[] ss = TestUtils.stringToIntegerArray(source);
-        Assertions.assertEquals(res, new Solution().expectNumber(ss));
+    void numWays(int n, String r, int k, int res) {
+        System.out.printf("runTest: %d %s %d , res: %d", n, r, k, res);
+        int[][] ss = TestUtils.stringToInt2dArray(r);
+        Assertions.assertEquals(res, new Solution().numWays(n, ss, k));
     }
 }

@@ -1,7 +1,7 @@
-package com.yourtion.leetcode.easy.c1457;
+package com.yourtion.leetcode.easy.c9007;
 
 /**
- * 1457. 面试题 01.02. 判定是否互为字符重排
+ * 9007. 面试题 01.02. 判定是否互为字符重排
  *
  * @author Yourtion
  * @link https://leetcode-cn.com/problems/check-permutation-lcci/

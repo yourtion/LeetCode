@@ -7,9 +7,7 @@ import com.yourtion.leetcode.utils.json.Json;
 import com.yourtion.leetcode.utils.json.JsonArray;
 import com.yourtion.leetcode.utils.json.JsonValue;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class TestUtils {
     public static int[] stringToIntegerArray(String input) {
@@ -35,6 +33,28 @@ public class TestUtils {
             arr[i] = in[i].trim();
         }
         return arr;
+    }
+
+    public static List<String> stringToStringList(String input) {
+        JsonArray jsonArray = Json.parse(input).asArray();
+        String[] arr = new String[jsonArray.size()];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = jsonArray.get(i).asString();
+        }
+        return Arrays.asList(arr);
+    }
+
+    public static List<List<String>> stringToString2dArray(String input) {
+        JsonArray jsonArray = Json.parse(input).asArray();
+        if (jsonArray.size() == 0) {
+            return new ArrayList<>();
+        }
+        List<List<String>> list = new ArrayList<>(jsonArray.size());
+        for (int i = 0; i < jsonArray.size(); i++) {
+            JsonArray cols = jsonArray.get(i).asArray();
+            list.add(stringToStringList(cols.toString()));
+        }
+        return list;
     }
 
     public static ListNode stringToListNode(String input) {

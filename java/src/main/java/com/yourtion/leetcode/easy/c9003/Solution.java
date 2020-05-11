@@ -1,7 +1,7 @@
-package com.yourtion.leetcode.easy.c1445;
+package com.yourtion.leetcode.easy.c9003;
 
 /**
- * 1445. LCP 06. 拿硬币
+ * 9003. LCP 06. 拿硬币
  *
  * @author Yourtion
  * @link https://leetcode-cn.com/problems/na-ying-bi/

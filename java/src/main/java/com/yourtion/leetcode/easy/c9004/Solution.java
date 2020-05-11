@@ -1,11 +1,11 @@
-package com.yourtion.leetcode.easy.c1446;
+package com.yourtion.leetcode.easy.c9004;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 1446. LCP 07. 传递信息
+ * 9005. LCP 07. 传递信息
  *
  * @author Yourtion
  * @link https://leetcode-cn.com/problems/chuan-di-xin-xi/

@@ -1,7 +1,7 @@
-package com.yourtion.leetcode.easy.c1441;
+package com.yourtion.leetcode.easy.c9002;
 
 /**
- * 1441. LCP 02. 分式化简
+ * 9002. LCP 02. 分式化简
  *
  * @author Yourtion
  * @link https://leetcode-cn.com/problems/deep-dark-fraction/

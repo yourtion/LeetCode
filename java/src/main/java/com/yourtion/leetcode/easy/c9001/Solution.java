@@ -1,7 +1,7 @@
-package com.yourtion.leetcode.easy.c1440;
+package com.yourtion.leetcode.easy.c9001;
 
 /**
- * 1440. LCP 01. 猜数字
+ * 9001. LCP 01. 猜数字
  *
  * @author Yourtion
  * @link https://leetcode-cn.com/problems/guess-numbers/
