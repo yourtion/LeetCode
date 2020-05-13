@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-@DisplayName("每日一题 - 20200511")
+@DisplayName("每日一题 - 20200512")
 class MinStackTest {
 
     @Test
