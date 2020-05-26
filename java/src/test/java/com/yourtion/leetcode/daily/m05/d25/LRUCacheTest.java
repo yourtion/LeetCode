@@ -1,4 +1,4 @@
-package com.yourtion.leetcode.daily.m05.d26;
+package com.yourtion.leetcode.daily.m05.d25;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

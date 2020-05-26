@@ -1,4 +1,4 @@
-package com.yourtion.leetcode.daily.m05.d26;
+package com.yourtion.leetcode.daily.m05.d25;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
