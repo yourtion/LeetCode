@@ -11,11 +11,11 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 #parse("File Header.java")
 @DisplayName("")
 class ${NAME} {
+
   static Stream<Arguments> testDataProvider() {
     return Stream.of(
         arguments()
     );
   }
-    
   ${BODY}
 }
