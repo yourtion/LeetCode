@@ -1,4 +1,4 @@
-package com.yourtion.leetcode.daily.m06.d09;
+package com.yourtion.leetcode.daily.m06.d10;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -10,19 +10,22 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("每日一题 - 20200609")
+@DisplayName("每日一题 - 20200610")
 class SolutionTest {
 
     static Stream<Arguments> testDataProvider() {
         return Stream.of(
-                arguments(12258, 5)
+                arguments(121, true),
+                arguments(-121, false),
+                arguments(10, false),
+                arguments(12321, true)
         );
     }
 
     @ParameterizedTest()
     @MethodSource("testDataProvider")
-    void translateNum(int source, int res) {
-        System.out.printf("runTest: %d , res: %d", source, res);
-        Assertions.assertEquals(res, new Solution().translateNum(source));
+    void isPalindrome(int source, boolean res) {
+        System.out.printf("runTest: %s , res: %b", source, res);
+        Assertions.assertEquals(res, new Solution().isPalindrome(source));
     }
 }
