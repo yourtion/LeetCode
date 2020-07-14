@@ -57,6 +57,28 @@ public class TestUtils {
         return list;
     }
 
+    public static List<Integer> stringToIntegerList(String input) {
+        JsonArray jsonArray = Json.parse(input).asArray();
+        Integer[] arr = new Integer[jsonArray.size()];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = jsonArray.get(i).asInt();
+        }
+        return Arrays.asList(arr);
+    }
+
+    public static List<List<Integer>> stringToInteger2dArray(String input) {
+        JsonArray jsonArray = Json.parse(input).asArray();
+        if (jsonArray.size() == 0) {
+            return new ArrayList<>();
+        }
+        List<List<Integer>> list = new ArrayList<>(jsonArray.size());
+        for (int i = 0; i < jsonArray.size(); i++) {
+            JsonArray cols = jsonArray.get(i).asArray();
+            list.add(stringToIntegerList(cols.toString()));
+        }
+        return list;
+    }
+
     public static ListNode stringToListNode(String input) {
         // Generate array from the input
         int[] nodeValues = stringToIntegerArray(input);
