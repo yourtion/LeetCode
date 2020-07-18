@@ -1,7 +1,10 @@
 package com.yourtion.leetcode.daily.m07.d17;
 
 /**
+ * 35. 搜索插入位置
+ *
  * @author Yourtion
+ * @link https://leetcode-cn.com/problems/search-insert-position/
  */
 public class Solution {
     public int searchInsert(int[] nums, int target) {
