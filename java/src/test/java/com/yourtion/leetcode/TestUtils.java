@@ -333,4 +333,61 @@ public class TestUtils {
         c2.add(new Node(4));
         return new Node(1, c2);
     }
+
+    public static com.yourtion.leetcode.utils.graph.Node stringToGraphNode(String input) {
+        HashMap<Integer, com.yourtion.leetcode.utils.graph.Node> map = new HashMap<>();
+        int[][] adj = stringToInt2dArray(input);
+        com.yourtion.leetcode.utils.graph.Node n = null;
+        for (int i = 1; i <= adj.length; i++) {
+            if (adj[i - 1].length < 1) {
+                continue;
+            }
+            map.putIfAbsent(i, new com.yourtion.leetcode.utils.graph.Node(i));
+            com.yourtion.leetcode.utils.graph.Node nn = map.get(i);
+            if (i == 1) {
+                n = nn;
+            }
+            for (int j : adj[i - 1]) {
+                map.putIfAbsent(j, new com.yourtion.leetcode.utils.graph.Node(j));
+                nn.neighbors.add(map.get(j));
+            }
+        }
+        return n;
+    }
+
+    public static String graphNodeToString(com.yourtion.leetcode.utils.graph.Node root) {
+        if (root == null) {
+            return "[[]]";
+        }
+
+        StringBuilder output = new StringBuilder();
+        Queue<com.yourtion.leetcode.utils.graph.Node> nodeQueue = new LinkedList<>();
+        Map<Integer, List<com.yourtion.leetcode.utils.graph.Node>> map = new HashMap<>();
+        int max = 1;
+        nodeQueue.add(root);
+        while (!nodeQueue.isEmpty()) {
+            com.yourtion.leetcode.utils.graph.Node node = nodeQueue.remove();
+            if (node == null || map.containsKey(node.val)) {
+                continue;
+            }
+            map.put(node.val, node.neighbors);
+            max = Math.max(max, node.val);
+            nodeQueue.addAll(node.neighbors);
+        }
+        for (int i = 0; i < max; i++) {
+            List<com.yourtion.leetcode.utils.graph.Node> l = map.get(i + 1);
+            if (l == null || l.size() < 1) {
+                output.append("[], ");
+                continue;
+            }
+            output.append("[");
+            StringBuilder sb = new StringBuilder();
+            for (com.yourtion.leetcode.utils.graph.Node n : l) {
+                sb.append(n.val).append(", ");
+            }
+            output.append(sb.substring(0, sb.length() - 2));
+            output.append("],");
+        }
+        return "[" + output.substring(0, output.length() - 1) + "]";
+    }
 }
