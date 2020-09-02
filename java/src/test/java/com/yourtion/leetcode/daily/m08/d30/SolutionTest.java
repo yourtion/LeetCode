@@ -15,9 +15,7 @@ class SolutionTest {
 
     static Stream<Arguments> testDataProvider() {
         return Stream.of(
-                arguments("the sky is blue", "blue is sky the"),
-                arguments("  hello world!  ", "world! hello"),
-                arguments("a good   example", "example good a"),
+                arguments("Let's take LeetCode contest", "s'teL ekat edoCteeL tsetnoc"),
                 arguments("", "")
         );
     }
