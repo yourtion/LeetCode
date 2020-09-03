@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("每日一题 - 20200901")
+@DisplayName("每日一题 - 20200902")
 class SolutionTest {
 
     static Stream<Arguments> testDataProvider() {
