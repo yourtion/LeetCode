@@ -6,7 +6,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 501. 二叉搜索树中的众数
+ *
  * @author Yourtion
+ * https://leetcode-cn.com/problems/find-mode-in-binary-search-tree/
  */
 public class Solution {
     private int traverse(TreeNode node, Map<Integer, Integer> map, int count) {
