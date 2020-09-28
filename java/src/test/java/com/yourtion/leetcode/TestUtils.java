@@ -390,4 +390,71 @@ public class TestUtils {
         }
         return "[" + output.substring(0, output.length() - 1) + "]";
     }
+
+    public static com.yourtion.leetcode.utils.binary.Node stringToBinaryTreeNode(String input) {
+        input = input.trim();
+        input = input.substring(1, input.length() - 1);
+        if (input.length() == 0) {
+            return null;
+        }
+
+        String[] parts = input.split(",");
+        String item = parts[0];
+        com.yourtion.leetcode.utils.binary.Node root = new com.yourtion.leetcode.utils.binary.Node(Integer.parseInt(item));
+        Queue<com.yourtion.leetcode.utils.binary.Node> nodeQueue = new LinkedList<>();
+        nodeQueue.add(root);
+
+        int index = 1;
+        while (!nodeQueue.isEmpty()) {
+            com.yourtion.leetcode.utils.binary.Node node = nodeQueue.remove();
+
+            if (index == parts.length) {
+                break;
+            }
+
+            item = parts[index++];
+            item = item.trim();
+            if (!item.equals("null")) {
+                int leftNumber = Integer.parseInt(item);
+                node.left = new com.yourtion.leetcode.utils.binary.Node(leftNumber);
+                nodeQueue.add(node.left);
+            }
+
+            if (index == parts.length) {
+                break;
+            }
+
+            item = parts[index++];
+            item = item.trim();
+            if (!item.equals("null")) {
+                int rightNumber = Integer.parseInt(item);
+                node.right = new com.yourtion.leetcode.utils.binary.Node(rightNumber);
+                nodeQueue.add(node.right);
+            }
+        }
+        return root;
+    }
+
+    public static String binaryTreeNodeToString(com.yourtion.leetcode.utils.binary.Node root) {
+        if (root == null) {
+            return "[]";
+        }
+
+        StringBuilder output = new StringBuilder();
+        Queue<com.yourtion.leetcode.utils.binary.Node> nodeQueue = new LinkedList<>();
+        nodeQueue.add(root);
+        while (!nodeQueue.isEmpty()) {
+            com.yourtion.leetcode.utils.binary.Node node = nodeQueue.remove();
+
+            if (node == null) {
+                output.append("null, ");
+                continue;
+            }
+
+            output.append(node.val).append(", ");
+            nodeQueue.add(node.left);
+            nodeQueue.add(node.right);
+        }
+        return "[" + output.substring(0, output.length() - 2) + "]";
+    }
 }
