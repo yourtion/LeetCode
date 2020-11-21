@@ -13,6 +13,11 @@ public class ListNode {
         val = x;
     }
 
+    public ListNode(int x, ListNode n) {
+        val = x;
+        next = n;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
