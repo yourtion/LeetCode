@@ -4,9 +4,10 @@ defaults:
   run:
     working-directory: ./java
 
-on: push
-  paths:
-    - 'java/**'
+on: 
+  push:
+    paths:
+      - 'java/**'
 
 jobs:
   build:
