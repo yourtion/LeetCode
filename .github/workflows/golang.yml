@@ -1,0 +1,22 @@
+name: Go CI
+
+defaults:
+  run:
+    working-directory: ./golang
+
+on: 
+  push:
+    paths:
+      - 'golang/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Go
+        uses: actions/setup-go@v1
+        with:
+          go-version: 1.15
+      - run: go test -cover ./...
