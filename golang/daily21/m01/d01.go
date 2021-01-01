@@ -1,7 +1,7 @@
-// Package y2021m01d01 每日一题 20210101
+// 每日一题 20210101
 // 605. 种花问题
 // Link: https://leetcode-cn.com/problems/can-place-flowers/
-package y2021m01d01
+package y2021m01
 
 func canPlaceFlowers(flowerbed []int, n int) bool {
 	for i, v := range flowerbed {

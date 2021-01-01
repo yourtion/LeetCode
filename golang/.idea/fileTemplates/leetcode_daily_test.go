@@ -1,4 +1,4 @@
-package y${YEAR}m${MONTH}d${DAY}
+package y${YEAR}m${MONTH}
 import (
 	"fmt"
 	"testing"
