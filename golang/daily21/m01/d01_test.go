@@ -7,13 +7,12 @@ import (
 	"github.com/yourtion/LeetCode/golang/utils"
 )
 
-type params struct {
-	para1 []int
-	para2 int
-	ans   bool
-}
-
 func Test_20210101(t *testing.T) {
+	type params struct {
+		para1 []int
+		para2 int
+		ans   bool
+	}
 	qs := []params{
 		{
 			para1: []int{1, 0, 0, 0, 1},

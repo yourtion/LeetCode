@@ -6,12 +6,11 @@ import (
 	"github.com/yourtion/LeetCode/golang/utils"
 )
 
-type params struct {
-	para string
-	ans int
-}
-
 func Test_${YEAR}${MONTH}${DAY}(t *testing.T) {
+    type params struct {
+        para string
+        ans int
+    }
     qs := []params{
 		{
 			para: "",
