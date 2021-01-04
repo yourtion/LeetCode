@@ -1,8 +1,9 @@
-// 每日一题 20210102
-// 239. 滑动窗口最大值
-// Link: https://leetcode-cn.com/problems/sliding-window-maximum/
 package y2021m01
 
+// 每日一题 20210102
+//
+// 239. 滑动窗口最大值
+// Link: https://leetcode-cn.com/problems/sliding-window-maximum/
 func maxSlidingWindow(nums []int, k int) []int {
 	if k < 2 {
 		return nums

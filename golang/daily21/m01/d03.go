@@ -1,12 +1,13 @@
-// 每日一题 20210103
-// 86. 分隔链表
-// Link: https://leetcode-cn.com/problems/partition-list/
 package y2021m01
 
 import "github.com/yourtion/LeetCode/golang/utils"
 
 type ListNode = utils.ListNode
 
+// 每日一题 20210103
+//
+// 86. 分隔链表
+// Link: https://leetcode-cn.com/problems/partition-list/
 func partition(head *ListNode, x int) *ListNode {
 	// 小于 x 的结果
 	less := &ListNode{Val: -1}
