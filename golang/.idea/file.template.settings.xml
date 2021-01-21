@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ExportableFileTemplateSettings">
     <default_templates>
-      <template name="leetcode_daily.go" file-name="d${DAY}" reformat="true" live-template-enabled="false" />
-      <template name="leetcode_daily_test.go" file-name="d${DAY}_test" reformat="true" live-template-enabled="false" />
+      <template name="leetcode_daily.go" file-name="d${DAY}.go" reformat="true" live-template-enabled="false" />
+      <template name="leetcode_daily_test.go" file-name="d${DAY}_test.go" reformat="true" live-template-enabled="false" />
     </default_templates>
   </component>
 </project>
