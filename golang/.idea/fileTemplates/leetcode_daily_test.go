@@ -23,7 +23,7 @@ func Test_${YEAR}${MONTH}${DAY}(t *testing.T) {
 	for _, q := range qs {
 		ret, p := q.ans, q.para
 		res := 
-		fmt.Printf("【input】:%v \t【output】:%v\n", p, res)
+		fmt.Printf("【input】: %v \t【output】: %v\n", p, res)
 		if ret != res {
 			t.Errorf(`"%v" not equal to "%v"`, res, ret)
 		}
