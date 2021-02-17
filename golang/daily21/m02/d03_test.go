@@ -35,7 +35,7 @@ func Test_20210203(t *testing.T) {
 
 	for _, q := range qs {
 		ret, p, k := q.ans, q.para1, q.para2
-		res := medianSlidingWindow(p, k)
+		res := medianSlidingWindow(utils.DeepCloneIntSlice(p), k)
 		fmt.Printf("【input】: %v \t【output】: %v\n", p, res)
 		if !utils.DeepEqual(ret, res) {
 			t.Errorf(`"%v" not equal to "%v"`, res, ret)

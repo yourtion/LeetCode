@@ -33,7 +33,8 @@ func Test_20210118(t *testing.T) {
 	slice2dToMap := func(arr [][]string) map[string][]string {
 		ret := map[string][]string{}
 		for _, v := range arr {
-			ret[v[0]] = v[1:]
+			k := fmt.Sprintf("%s-%d", v[0], len(v))
+			ret[k] = v[1:]
 		}
 		return ret
 	}

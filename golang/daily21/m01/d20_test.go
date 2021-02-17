@@ -27,7 +27,7 @@ func Test_20210120(t *testing.T) {
 
 	for _, q := range qs {
 		ret, p := q.ans, q.para
-		res := maximumProduct(p)
+		res := maximumProduct(utils.DeepCloneIntSlice(p))
 		fmt.Printf("【input】:%v \t【output】:%v\n", p, res)
 		if ret != res {
 			t.Errorf(`"%v" not equal to "%v"`, res, ret)

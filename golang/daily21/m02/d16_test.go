@@ -26,9 +26,9 @@ func Test_20210216(t *testing.T) {
 	utils.Segmentation("20210216")
 
 	for _, q := range qs {
-		ret, p, po := q.ans, q.para, utils.DeepCloneIntSlice(q.para)
-		res := arrayPairSum(p)
-		fmt.Printf("【input】: %v \t【output】: %v\n", po, res)
+		ret, p := q.ans, q.para
+		res := arrayPairSum(utils.DeepCloneIntSlice(p))
+		fmt.Printf("【input】: %v \t【output】: %v\n", p, res)
 		if ret != res {
 			t.Errorf(`"%v" not equal to "%v"`, res, ret)
 		}
