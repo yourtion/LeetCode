@@ -25,3 +25,13 @@ func TestDeepCloneIntSlice(t *testing.T) {
 		t.FailNow()
 	}
 }
+
+func TestDeepCloneIntSlice2d(t *testing.T) {
+	a := [][]int{{3, 2, 1}, {1, 2, 3}}
+	b := DeepCloneIntSlice2d(a)
+	sort.Ints(a[0])
+	t.Log(a, b)
+	if b[0][0] != 3 || b[0][2] != 1 {
+		t.FailNow()
+	}
+}
