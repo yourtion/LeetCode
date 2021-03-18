@@ -1,5 +1,7 @@
 package utils
 
+import "strconv"
+
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -24,4 +26,17 @@ func (head *ListNode) ToIntArr() []int {
 		n = n.Next
 	}
 	return ret
+}
+
+func (head *ListNode) String() string {
+	ret := ""
+	cur := head
+	for cur.Next != nil {
+		ret += " -> " + strconv.Itoa(cur.Val)
+		cur = cur.Next
+	}
+	if len(ret) >= 4 {
+		ret = ret[4:]
+	}
+	return "ListNode{ " + ret + " }"
 }
