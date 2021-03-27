@@ -31,7 +31,7 @@ func (head *ListNode) ToIntArr() []int {
 func (head *ListNode) String() string {
 	ret := ""
 	cur := head
-	for cur.Next != nil {
+	for cur != nil {
 		ret += " -> " + strconv.Itoa(cur.Val)
 		cur = cur.Next
 	}
