@@ -23,7 +23,7 @@ func Test_20210418(t *testing.T) {
 		},
 		{
 			para: []int{0},
-			ans:  []int{0, 1, 2, 3, 4},
+			ans:  []int{0},
 		},
 	}
 
