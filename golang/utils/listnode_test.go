@@ -30,3 +30,19 @@ func TestListNode(t *testing.T) {
 		})
 	}
 }
+
+func TestLinkedListCombine(t *testing.T) {
+	list1 := NewListNode([]int{4, 1, 8, 4, 5})
+	list2 := NewListNode([]int{5, 0, 1, 8, 4, 5})
+	skip1, skip2 := 2, 3
+	LinkedListCombine(list1, list2, skip1, skip2)
+	for i := 0; i < skip1; i++ {
+		list1 = list1.Next
+	}
+	for i := 0; i < skip2; i++ {
+		list2 = list2.Next
+	}
+	if list1.Val != 8 || list2.Val != 8 || &list1 != &list2 {
+		t.Failed()
+	}
+}
