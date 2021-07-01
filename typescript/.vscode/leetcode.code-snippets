@@ -1,0 +1,20 @@
+{
+  "annotation": {
+    "scope": "javascript,typescript",
+    "prefix": "anno",
+    "body": [
+      "import { runAllTest } from \"../../utils/test\"",
+      "/**",
+      " * ",
+      " * ",
+      " * @link ",
+      " */",
+      "$1",
+      "",
+      "runAllTest(\"$CURRENT_YEAR$CURRENT_MONTH$CURRENT_DATE\", , [",
+      "  { args: [], res: 0 }",
+      "]);"
+    ],
+    "description": "Log output to console"
+  }
+}
