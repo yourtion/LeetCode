@@ -1,7 +1,7 @@
 {
-  "annotation": {
+  "init-daily": {
     "scope": "javascript,typescript",
-    "prefix": "anno",
+    "prefix": "initd",
     "body": [
       "import { runAllTest } from \"../../utils/test\"",
       "/**",
@@ -12,7 +12,7 @@
       "$1",
       "",
       "runAllTest(\"$CURRENT_YEAR$CURRENT_MONTH$CURRENT_DATE\", , [",
-      "  { args: [], res: 0 }",
+      "  { args: [], res: 0 },",
       "]);"
     ],
     "description": "Log output to console"
