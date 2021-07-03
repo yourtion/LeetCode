@@ -1,7 +1,7 @@
 import { runAllTest } from "../../utils/test"
 /**
- * 
  * 1833. 雪糕的最大数量
+ * 
  * @link https://leetcode-cn.com/problems/maximum-ice-cream-bars/
  */
 function maxIceCream(costs: number[], coins: number): number {
