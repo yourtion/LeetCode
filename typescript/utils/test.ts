@@ -31,7 +31,7 @@ function deepEqual(x: unknown, y: unknown): boolean {
  */
 function runTest<T extends FN>(fn: T, args: Parameters<T>[], res: ReturnType<T>) {
   const ret = fn(...args)
-  console.log(`【input】:${JSON.stringify(args)} \t【output】:${JSON.stringify(ret)}`)
+  console.error(`【input】:${JSON.stringify(args)} \t【output】:${JSON.stringify(ret)}`)
   console.assert(deepEqual(ret, res), `"${ret}" not equal to "${res}"`)
 }
 
